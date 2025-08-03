@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 23 11:20:41 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Fri Jun 13 13:13:30 CEST 2025 */
 
 package org.texttechnologylab.annotation.core;
  
@@ -16,11 +16,12 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
 
+import org.apache.uima.jcas.cas.StringList;
 import org.apache.uima.jcas.cas.AnnotationBase;
 
 
 /** 
- * Updated by JCasGen Thu Jan 23 11:20:41 CET 2025
+ * Updated by JCasGen Fri Jun 13 13:13:30 CEST 2025
  * XML source: /home/filip/Documents/Bachelor/UIMATypeSystem-FilipFork/target/jcasgen/typesystem.xml
  * @generated */
 public class NeobridgeUser extends AnnotationBase {
@@ -52,36 +53,21 @@ public class NeobridgeUser extends AnnotationBase {
    *   Feature Offsets *
    * *******************/ 
    
-  public final static String _FeatName_id = "id";
-  public final static String _FeatName_created = "created";
-  public final static String _FeatName_email = "email";
-  public final static String _FeatName_openId = "openId";
-  public final static String _FeatName_roles = "roles";
-  public final static String _FeatName_userID = "userID";
+  public final static String _FeatName_internalId = "internalId";
   public final static String _FeatName_username = "username";
-  public final static String _FeatName_picture = "picture";
-  public final static String _FeatName_realName = "realName";
+  public final static String _FeatName_userId = "userId";
+  public final static String _FeatName_roles = "roles";
 
 
   /* Feature Adjusted Offsets */
-  private final static CallSite _FC_id = TypeSystemImpl.createCallSite(NeobridgeUser.class, "id");
-  private final static MethodHandle _FH_id = _FC_id.dynamicInvoker();
-  private final static CallSite _FC_created = TypeSystemImpl.createCallSite(NeobridgeUser.class, "created");
-  private final static MethodHandle _FH_created = _FC_created.dynamicInvoker();
-  private final static CallSite _FC_email = TypeSystemImpl.createCallSite(NeobridgeUser.class, "email");
-  private final static MethodHandle _FH_email = _FC_email.dynamicInvoker();
-  private final static CallSite _FC_openId = TypeSystemImpl.createCallSite(NeobridgeUser.class, "openId");
-  private final static MethodHandle _FH_openId = _FC_openId.dynamicInvoker();
-  private final static CallSite _FC_roles = TypeSystemImpl.createCallSite(NeobridgeUser.class, "roles");
-  private final static MethodHandle _FH_roles = _FC_roles.dynamicInvoker();
-  private final static CallSite _FC_userID = TypeSystemImpl.createCallSite(NeobridgeUser.class, "userID");
-  private final static MethodHandle _FH_userID = _FC_userID.dynamicInvoker();
+  private final static CallSite _FC_internalId = TypeSystemImpl.createCallSite(NeobridgeUser.class, "internalId");
+  private final static MethodHandle _FH_internalId = _FC_internalId.dynamicInvoker();
   private final static CallSite _FC_username = TypeSystemImpl.createCallSite(NeobridgeUser.class, "username");
   private final static MethodHandle _FH_username = _FC_username.dynamicInvoker();
-  private final static CallSite _FC_picture = TypeSystemImpl.createCallSite(NeobridgeUser.class, "picture");
-  private final static MethodHandle _FH_picture = _FC_picture.dynamicInvoker();
-  private final static CallSite _FC_realName = TypeSystemImpl.createCallSite(NeobridgeUser.class, "realName");
-  private final static MethodHandle _FH_realName = _FC_realName.dynamicInvoker();
+  private final static CallSite _FC_userId = TypeSystemImpl.createCallSite(NeobridgeUser.class, "userId");
+  private final static MethodHandle _FH_userId = _FC_userId.dynamicInvoker();
+  private final static CallSite _FC_roles = TypeSystemImpl.createCallSite(NeobridgeUser.class, "roles");
+  private final static MethodHandle _FH_roles = _FC_roles.dynamicInvoker();
 
    
   /** Never called.  Disable default constructor
@@ -121,127 +107,22 @@ public class NeobridgeUser extends AnnotationBase {
  
     
   //*--------------*
-  //* Feature: id
+  //* Feature: internalId
 
-  /** getter for id - gets 
+  /** getter for internalId - gets Numeric ID for internal handling, in most cases assigned by the data bank.
    * @generated
    * @return value of the feature 
    */
-  public String getId() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_id));
+  public long getInternalId() { 
+    return _getLongValueNc(wrapGetIntCatchException(_FH_internalId));
   }
     
-  /** setter for id - sets  
+  /** setter for internalId - sets Numeric ID for internal handling, in most cases assigned by the data bank. 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setId(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_id), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: created
-
-  /** getter for created - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public String getCreated() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_created));
-  }
-    
-  /** setter for created - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setCreated(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_created), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: email
-
-  /** getter for email - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public String getEmail() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_email));
-  }
-    
-  /** setter for email - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setEmail(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_email), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: openId
-
-  /** getter for openId - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public String getOpenId() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_openId));
-  }
-    
-  /** setter for openId - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setOpenId(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_openId), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: roles
-
-  /** getter for roles - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public String getRoles() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_roles));
-  }
-    
-  /** setter for roles - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setRoles(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_roles), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: userID
-
-  /** getter for userID - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public String getUserID() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_userID));
-  }
-    
-  /** setter for userID - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setUserID(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_userID), v);
+  public void setInternalId(long v) {
+    _setLongValueNfc(wrapGetIntCatchException(_FH_internalId), v);
   }    
     
    
@@ -249,7 +130,7 @@ public class NeobridgeUser extends AnnotationBase {
   //*--------------*
   //* Feature: username
 
-  /** getter for username - gets 
+  /** getter for username - gets Assigned username
    * @generated
    * @return value of the feature 
    */
@@ -257,7 +138,7 @@ public class NeobridgeUser extends AnnotationBase {
     return _getStringValueNc(wrapGetIntCatchException(_FH_username));
   }
     
-  /** setter for username - sets  
+  /** setter for username - sets Assigned username 
    * @generated
    * @param v value to set into the feature 
    */
@@ -268,43 +149,43 @@ public class NeobridgeUser extends AnnotationBase {
    
     
   //*--------------*
-  //* Feature: picture
+  //* Feature: userId
 
-  /** getter for picture - gets 
+  /** getter for userId - gets String ID assigned to the user
    * @generated
    * @return value of the feature 
    */
-  public String getPicture() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_picture));
+  public String getUserId() { 
+    return _getStringValueNc(wrapGetIntCatchException(_FH_userId));
   }
     
-  /** setter for picture - sets  
+  /** setter for userId - sets String ID assigned to the user 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setPicture(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_picture), v);
+  public void setUserId(String v) {
+    _setStringValueNfc(wrapGetIntCatchException(_FH_userId), v);
   }    
     
    
     
   //*--------------*
-  //* Feature: realName
+  //* Feature: roles
 
-  /** getter for realName - gets 
+  /** getter for roles - gets Roles of the user, e.g. ["admin", "user"]
    * @generated
    * @return value of the feature 
    */
-  public String getRealName() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_realName));
+  public StringList getRoles() { 
+    return (StringList)(_getFeatureValueNc(wrapGetIntCatchException(_FH_roles)));
   }
     
-  /** setter for realName - sets  
+  /** setter for roles - sets Roles of the user, e.g. ["admin", "user"] 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setRealName(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_realName), v);
+  public void setRoles(StringList v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_roles), v);
   }    
     
   }

@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 23 11:20:41 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Sat Jun 14 14:21:44 CEST 2025 */
 
 package org.texttechnologylab.annotation.core;
  
@@ -16,11 +16,12 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
 
+import org.texttechnologylab.annotation.type.Image;
 import org.apache.uima.jcas.cas.AnnotationBase;
 
 
 /** 
- * Updated by JCasGen Thu Jan 23 11:20:41 CET 2025
+ * Updated by JCasGen Sat Jun 14 14:21:44 CEST 2025
  * XML source: /home/filip/Documents/Bachelor/UIMATypeSystem-FilipFork/target/jcasgen/typesystem.xml
  * @generated */
 public class Screenshot extends AnnotationBase {
@@ -52,21 +53,18 @@ public class Screenshot extends AnnotationBase {
    *   Feature Offsets *
    * *******************/ 
    
-  public final static String _FeatName_id = "id";
-  public final static String _FeatName_reason = "reason";
+  public final static String _FeatName_internalId = "internalId";
+  public final static String _FeatName_image = "image";
   public final static String _FeatName_timestamp = "timestamp";
-  public final static String _FeatName_base64Encoding = "base64Encoding";
 
 
   /* Feature Adjusted Offsets */
-  private final static CallSite _FC_id = TypeSystemImpl.createCallSite(Screenshot.class, "id");
-  private final static MethodHandle _FH_id = _FC_id.dynamicInvoker();
-  private final static CallSite _FC_reason = TypeSystemImpl.createCallSite(Screenshot.class, "reason");
-  private final static MethodHandle _FH_reason = _FC_reason.dynamicInvoker();
+  private final static CallSite _FC_internalId = TypeSystemImpl.createCallSite(Screenshot.class, "internalId");
+  private final static MethodHandle _FH_internalId = _FC_internalId.dynamicInvoker();
+  private final static CallSite _FC_image = TypeSystemImpl.createCallSite(Screenshot.class, "image");
+  private final static MethodHandle _FH_image = _FC_image.dynamicInvoker();
   private final static CallSite _FC_timestamp = TypeSystemImpl.createCallSite(Screenshot.class, "timestamp");
   private final static MethodHandle _FH_timestamp = _FC_timestamp.dynamicInvoker();
-  private final static CallSite _FC_base64Encoding = TypeSystemImpl.createCallSite(Screenshot.class, "base64Encoding");
-  private final static MethodHandle _FH_base64Encoding = _FC_base64Encoding.dynamicInvoker();
 
    
   /** Never called.  Disable default constructor
@@ -106,43 +104,43 @@ public class Screenshot extends AnnotationBase {
  
     
   //*--------------*
-  //* Feature: id
+  //* Feature: internalId
 
-  /** getter for id - gets 
+  /** getter for internalId - gets Internal ID only unique per session
    * @generated
    * @return value of the feature 
    */
-  public String getId() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_id));
+  public long getInternalId() { 
+    return _getLongValueNc(wrapGetIntCatchException(_FH_internalId));
   }
     
-  /** setter for id - sets  
+  /** setter for internalId - sets Internal ID only unique per session 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setId(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_id), v);
+  public void setInternalId(long v) {
+    _setLongValueNfc(wrapGetIntCatchException(_FH_internalId), v);
   }    
     
    
     
   //*--------------*
-  //* Feature: reason
+  //* Feature: image
 
-  /** getter for reason - gets 
+  /** getter for image - gets Screenshot image
    * @generated
    * @return value of the feature 
    */
-  public String getReason() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_reason));
+  public Image getImage() { 
+    return (Image)(_getFeatureValueNc(wrapGetIntCatchException(_FH_image)));
   }
     
-  /** setter for reason - sets  
+  /** setter for image - sets Screenshot image 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setReason(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_reason), v);
+  public void setImage(Image v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_image), v);
   }    
     
    
@@ -150,7 +148,7 @@ public class Screenshot extends AnnotationBase {
   //*--------------*
   //* Feature: timestamp
 
-  /** getter for timestamp - gets 
+  /** getter for timestamp - gets Screenshots time of taking
    * @generated
    * @return value of the feature 
    */
@@ -158,33 +156,12 @@ public class Screenshot extends AnnotationBase {
     return _getStringValueNc(wrapGetIntCatchException(_FH_timestamp));
   }
     
-  /** setter for timestamp - sets  
+  /** setter for timestamp - sets Screenshots time of taking 
    * @generated
    * @param v value to set into the feature 
    */
   public void setTimestamp(String v) {
     _setStringValueNfc(wrapGetIntCatchException(_FH_timestamp), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: base64Encoding
-
-  /** getter for base64Encoding - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public String getBase64Encoding() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_base64Encoding));
-  }
-    
-  /** setter for base64Encoding - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setBase64Encoding(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_base64Encoding), v);
   }    
     
   }

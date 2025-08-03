@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 23 11:20:41 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Fri Jun 13 13:13:30 CEST 2025 */
 
 package org.texttechnologylab.annotation.core;
  
@@ -20,7 +20,7 @@ import org.apache.uima.jcas.cas.AnnotationBase;
 
 
 /** 
- * Updated by JCasGen Thu Jan 23 11:20:41 CET 2025
+ * Updated by JCasGen Fri Jun 13 13:13:30 CEST 2025
  * XML source: /home/filip/Documents/Bachelor/UIMATypeSystem-FilipFork/target/jcasgen/typesystem.xml
  * @generated */
 public class PageOpen extends AnnotationBase {

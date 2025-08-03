@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 23 11:20:41 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Sat Jun 14 14:21:44 CEST 2025 */
 
 package org.texttechnologylab.annotation.core;
  
@@ -16,11 +16,12 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
 
+import org.texttechnologylab.annotation.type.Coordinate;
 import org.apache.uima.jcas.cas.AnnotationBase;
 
 
 /** 
- * Updated by JCasGen Thu Jan 23 11:20:41 CET 2025
+ * Updated by JCasGen Sat Jun 14 14:21:44 CEST 2025
  * XML source: /home/filip/Documents/Bachelor/UIMATypeSystem-FilipFork/target/jcasgen/typesystem.xml
  * @generated */
 public class ScrollEvent extends AnnotationBase {
@@ -52,31 +53,19 @@ public class ScrollEvent extends AnnotationBase {
    *   Feature Offsets *
    * *******************/ 
    
-  public final static String _FeatName_id = "id";
-  public final static String _FeatName_fromX = "fromX";
-  public final static String _FeatName_fromY = "fromY";
-  public final static String _FeatName_toX = "toX";
-  public final static String _FeatName_toY = "toY";
-  public final static String _FeatName_startTime = "startTime";
-  public final static String _FeatName_endTime = "endTime";
+  public final static String _FeatName_internalId = "internalId";
+  public final static String _FeatName_fromCoord = "fromCoord";
+  public final static String _FeatName_toCoord = "toCoord";
   public final static String _FeatName_timestamp = "timestamp";
 
 
   /* Feature Adjusted Offsets */
-  private final static CallSite _FC_id = TypeSystemImpl.createCallSite(ScrollEvent.class, "id");
-  private final static MethodHandle _FH_id = _FC_id.dynamicInvoker();
-  private final static CallSite _FC_fromX = TypeSystemImpl.createCallSite(ScrollEvent.class, "fromX");
-  private final static MethodHandle _FH_fromX = _FC_fromX.dynamicInvoker();
-  private final static CallSite _FC_fromY = TypeSystemImpl.createCallSite(ScrollEvent.class, "fromY");
-  private final static MethodHandle _FH_fromY = _FC_fromY.dynamicInvoker();
-  private final static CallSite _FC_toX = TypeSystemImpl.createCallSite(ScrollEvent.class, "toX");
-  private final static MethodHandle _FH_toX = _FC_toX.dynamicInvoker();
-  private final static CallSite _FC_toY = TypeSystemImpl.createCallSite(ScrollEvent.class, "toY");
-  private final static MethodHandle _FH_toY = _FC_toY.dynamicInvoker();
-  private final static CallSite _FC_startTime = TypeSystemImpl.createCallSite(ScrollEvent.class, "startTime");
-  private final static MethodHandle _FH_startTime = _FC_startTime.dynamicInvoker();
-  private final static CallSite _FC_endTime = TypeSystemImpl.createCallSite(ScrollEvent.class, "endTime");
-  private final static MethodHandle _FH_endTime = _FC_endTime.dynamicInvoker();
+  private final static CallSite _FC_internalId = TypeSystemImpl.createCallSite(ScrollEvent.class, "internalId");
+  private final static MethodHandle _FH_internalId = _FC_internalId.dynamicInvoker();
+  private final static CallSite _FC_fromCoord = TypeSystemImpl.createCallSite(ScrollEvent.class, "fromCoord");
+  private final static MethodHandle _FH_fromCoord = _FC_fromCoord.dynamicInvoker();
+  private final static CallSite _FC_toCoord = TypeSystemImpl.createCallSite(ScrollEvent.class, "toCoord");
+  private final static MethodHandle _FH_toCoord = _FC_toCoord.dynamicInvoker();
   private final static CallSite _FC_timestamp = TypeSystemImpl.createCallSite(ScrollEvent.class, "timestamp");
   private final static MethodHandle _FH_timestamp = _FC_timestamp.dynamicInvoker();
 
@@ -118,148 +107,64 @@ public class ScrollEvent extends AnnotationBase {
  
     
   //*--------------*
-  //* Feature: id
+  //* Feature: internalId
 
-  /** getter for id - gets 
+  /** getter for internalId - gets Numeric ID for internal handling, in most cases assigned by the data bank.
    * @generated
    * @return value of the feature 
    */
-  public String getId() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_id));
+  public long getInternalId() { 
+    return _getLongValueNc(wrapGetIntCatchException(_FH_internalId));
   }
     
-  /** setter for id - sets  
+  /** setter for internalId - sets Numeric ID for internal handling, in most cases assigned by the data bank. 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setId(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_id), v);
+  public void setInternalId(long v) {
+    _setLongValueNfc(wrapGetIntCatchException(_FH_internalId), v);
   }    
     
    
     
   //*--------------*
-  //* Feature: fromX
+  //* Feature: fromCoord
 
-  /** getter for fromX - gets 
+  /** getter for fromCoord - gets Starting coordinate of scroll
    * @generated
    * @return value of the feature 
    */
-  public int getFromX() { 
-    return _getIntValueNc(wrapGetIntCatchException(_FH_fromX));
+  public Coordinate getFromCoord() { 
+    return (Coordinate)(_getFeatureValueNc(wrapGetIntCatchException(_FH_fromCoord)));
   }
     
-  /** setter for fromX - sets  
+  /** setter for fromCoord - sets Starting coordinate of scroll 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setFromX(int v) {
-    _setIntValueNfc(wrapGetIntCatchException(_FH_fromX), v);
+  public void setFromCoord(Coordinate v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_fromCoord), v);
   }    
     
    
     
   //*--------------*
-  //* Feature: fromY
+  //* Feature: toCoord
 
-  /** getter for fromY - gets 
+  /** getter for toCoord - gets Ending coordinate of scroll
    * @generated
    * @return value of the feature 
    */
-  public int getFromY() { 
-    return _getIntValueNc(wrapGetIntCatchException(_FH_fromY));
+  public Coordinate getToCoord() { 
+    return (Coordinate)(_getFeatureValueNc(wrapGetIntCatchException(_FH_toCoord)));
   }
     
-  /** setter for fromY - sets  
+  /** setter for toCoord - sets Ending coordinate of scroll 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setFromY(int v) {
-    _setIntValueNfc(wrapGetIntCatchException(_FH_fromY), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: toX
-
-  /** getter for toX - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public int getToX() { 
-    return _getIntValueNc(wrapGetIntCatchException(_FH_toX));
-  }
-    
-  /** setter for toX - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setToX(int v) {
-    _setIntValueNfc(wrapGetIntCatchException(_FH_toX), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: toY
-
-  /** getter for toY - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public int getToY() { 
-    return _getIntValueNc(wrapGetIntCatchException(_FH_toY));
-  }
-    
-  /** setter for toY - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setToY(int v) {
-    _setIntValueNfc(wrapGetIntCatchException(_FH_toY), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: startTime
-
-  /** getter for startTime - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public String getStartTime() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_startTime));
-  }
-    
-  /** setter for startTime - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setStartTime(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_startTime), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: endTime
-
-  /** getter for endTime - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public String getEndTime() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_endTime));
-  }
-    
-  /** setter for endTime - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setEndTime(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_endTime), v);
+  public void setToCoord(Coordinate v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_toCoord), v);
   }    
     
    
@@ -267,7 +172,7 @@ public class ScrollEvent extends AnnotationBase {
   //*--------------*
   //* Feature: timestamp
 
-  /** getter for timestamp - gets 
+  /** getter for timestamp - gets Time of the scroll event
    * @generated
    * @return value of the feature 
    */
@@ -275,7 +180,7 @@ public class ScrollEvent extends AnnotationBase {
     return _getStringValueNc(wrapGetIntCatchException(_FH_timestamp));
   }
     
-  /** setter for timestamp - sets  
+  /** setter for timestamp - sets Time of the scroll event 
    * @generated
    * @param v value to set into the feature 
    */

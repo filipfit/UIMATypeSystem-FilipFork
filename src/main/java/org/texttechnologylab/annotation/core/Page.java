@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 23 11:20:41 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Sat Jun 14 14:21:44 CEST 2025 */
 
 package org.texttechnologylab.annotation.core;
  
@@ -16,11 +16,12 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
 
+import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.AnnotationBase;
 
 
 /** 
- * Updated by JCasGen Thu Jan 23 11:20:41 CET 2025
+ * Updated by JCasGen Sat Jun 14 14:21:44 CEST 2025
  * XML source: /home/filip/Documents/Bachelor/UIMATypeSystem-FilipFork/target/jcasgen/typesystem.xml
  * @generated */
 public class Page extends AnnotationBase {
@@ -52,27 +53,27 @@ public class Page extends AnnotationBase {
    *   Feature Offsets *
    * *******************/ 
    
-  public final static String _FeatName_id = "id";
-  public final static String _FeatName_title = "title";
+  public final static String _FeatName_internalId = "internalId";
   public final static String _FeatName_url = "url";
-  public final static String _FeatName_assessment_phase_in_session_id = "assessment_phase_in_session_id";
-  public final static String _FeatName_session_id = "session_id";
-  public final static String _FeatName_tab_id = "tab_id";
+  public final static String _FeatName_title = "title";
+  public final static String _FeatName_screenshots = "screenshots";
+  public final static String _FeatName_scrollEvents = "scrollEvents";
+  public final static String _FeatName_htmlSourceStates = "htmlSourceStates";
 
 
   /* Feature Adjusted Offsets */
-  private final static CallSite _FC_id = TypeSystemImpl.createCallSite(Page.class, "id");
-  private final static MethodHandle _FH_id = _FC_id.dynamicInvoker();
-  private final static CallSite _FC_title = TypeSystemImpl.createCallSite(Page.class, "title");
-  private final static MethodHandle _FH_title = _FC_title.dynamicInvoker();
+  private final static CallSite _FC_internalId = TypeSystemImpl.createCallSite(Page.class, "internalId");
+  private final static MethodHandle _FH_internalId = _FC_internalId.dynamicInvoker();
   private final static CallSite _FC_url = TypeSystemImpl.createCallSite(Page.class, "url");
   private final static MethodHandle _FH_url = _FC_url.dynamicInvoker();
-  private final static CallSite _FC_assessment_phase_in_session_id = TypeSystemImpl.createCallSite(Page.class, "assessment_phase_in_session_id");
-  private final static MethodHandle _FH_assessment_phase_in_session_id = _FC_assessment_phase_in_session_id.dynamicInvoker();
-  private final static CallSite _FC_session_id = TypeSystemImpl.createCallSite(Page.class, "session_id");
-  private final static MethodHandle _FH_session_id = _FC_session_id.dynamicInvoker();
-  private final static CallSite _FC_tab_id = TypeSystemImpl.createCallSite(Page.class, "tab_id");
-  private final static MethodHandle _FH_tab_id = _FC_tab_id.dynamicInvoker();
+  private final static CallSite _FC_title = TypeSystemImpl.createCallSite(Page.class, "title");
+  private final static MethodHandle _FH_title = _FC_title.dynamicInvoker();
+  private final static CallSite _FC_screenshots = TypeSystemImpl.createCallSite(Page.class, "screenshots");
+  private final static MethodHandle _FH_screenshots = _FC_screenshots.dynamicInvoker();
+  private final static CallSite _FC_scrollEvents = TypeSystemImpl.createCallSite(Page.class, "scrollEvents");
+  private final static MethodHandle _FH_scrollEvents = _FC_scrollEvents.dynamicInvoker();
+  private final static CallSite _FC_htmlSourceStates = TypeSystemImpl.createCallSite(Page.class, "htmlSourceStates");
+  private final static MethodHandle _FH_htmlSourceStates = _FC_htmlSourceStates.dynamicInvoker();
 
    
   /** Never called.  Disable default constructor
@@ -112,43 +113,22 @@ public class Page extends AnnotationBase {
  
     
   //*--------------*
-  //* Feature: id
+  //* Feature: internalId
 
-  /** getter for id - gets 
+  /** getter for internalId - gets Numeric ID for internal handling, in most cases assigned by the data bank.
    * @generated
    * @return value of the feature 
    */
-  public String getId() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_id));
+  public long getInternalId() { 
+    return _getLongValueNc(wrapGetIntCatchException(_FH_internalId));
   }
     
-  /** setter for id - sets  
+  /** setter for internalId - sets Numeric ID for internal handling, in most cases assigned by the data bank. 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setId(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_id), v);
-  }    
-    
-   
-    
-  //*--------------*
-  //* Feature: title
-
-  /** getter for title - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public String getTitle() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_title));
-  }
-    
-  /** setter for title - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setTitle(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_title), v);
+  public void setInternalId(long v) {
+    _setLongValueNfc(wrapGetIntCatchException(_FH_internalId), v);
   }    
     
    
@@ -156,7 +136,7 @@ public class Page extends AnnotationBase {
   //*--------------*
   //* Feature: url
 
-  /** getter for url - gets 
+  /** getter for url - gets URL of the page
    * @generated
    * @return value of the feature 
    */
@@ -164,7 +144,7 @@ public class Page extends AnnotationBase {
     return _getStringValueNc(wrapGetIntCatchException(_FH_url));
   }
     
-  /** setter for url - sets  
+  /** setter for url - sets URL of the page 
    * @generated
    * @param v value to set into the feature 
    */
@@ -175,66 +155,150 @@ public class Page extends AnnotationBase {
    
     
   //*--------------*
-  //* Feature: assessment_phase_in_session_id
+  //* Feature: title
 
-  /** getter for assessment_phase_in_session_id - gets 
+  /** getter for title - gets Page title
    * @generated
    * @return value of the feature 
    */
-  public String getAssessment_phase_in_session_id() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_assessment_phase_in_session_id));
+  public String getTitle() { 
+    return _getStringValueNc(wrapGetIntCatchException(_FH_title));
   }
     
-  /** setter for assessment_phase_in_session_id - sets  
+  /** setter for title - sets Page title 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setAssessment_phase_in_session_id(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_assessment_phase_in_session_id), v);
+  public void setTitle(String v) {
+    _setStringValueNfc(wrapGetIntCatchException(_FH_title), v);
   }    
     
    
     
   //*--------------*
-  //* Feature: session_id
+  //* Feature: screenshots
 
-  /** getter for session_id - gets 
+  /** getter for screenshots - gets All screenshots taken on the page
    * @generated
    * @return value of the feature 
    */
-  public String getSession_id() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_session_id));
+  @SuppressWarnings("unchecked")
+  public FSArray<Screenshot> getScreenshots() { 
+    return (FSArray<Screenshot>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_screenshots)));
   }
     
-  /** setter for session_id - sets  
+  /** setter for screenshots - sets All screenshots taken on the page 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setSession_id(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_session_id), v);
+  public void setScreenshots(FSArray<Screenshot> v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_screenshots), v);
   }    
     
+    
+  /** indexed getter for screenshots - gets an indexed value - All screenshots taken on the page
+   * @generated
+   * @param i index in the array to get
+   * @return value of the element at index i 
+   */
+  @SuppressWarnings("unchecked")
+  public Screenshot getScreenshots(int i) {
+     return (Screenshot)(((FSArray<Screenshot>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_screenshots)))).get(i));
+  } 
+
+  /** indexed setter for screenshots - sets an indexed value - All screenshots taken on the page
+   * @generated
+   * @param i index in the array to set
+   * @param v value to set into the array 
+   */
+  @SuppressWarnings("unchecked")
+    public void setScreenshots(int i, Screenshot v) {
+    ((FSArray<Screenshot>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_screenshots)))).set(i, v);
+  }  
    
     
   //*--------------*
-  //* Feature: tab_id
+  //* Feature: scrollEvents
 
-  /** getter for tab_id - gets 
+  /** getter for scrollEvents - gets All scroll events recorded on the page
    * @generated
    * @return value of the feature 
    */
-  public String getTab_id() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_tab_id));
+  @SuppressWarnings("unchecked")
+  public FSArray<ScrollEvent> getScrollEvents() { 
+    return (FSArray<ScrollEvent>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_scrollEvents)));
   }
     
-  /** setter for tab_id - sets  
+  /** setter for scrollEvents - sets All scroll events recorded on the page 
    * @generated
    * @param v value to set into the feature 
    */
-  public void setTab_id(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_tab_id), v);
+  public void setScrollEvents(FSArray<ScrollEvent> v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_scrollEvents), v);
   }    
     
+    
+  /** indexed getter for scrollEvents - gets an indexed value - All scroll events recorded on the page
+   * @generated
+   * @param i index in the array to get
+   * @return value of the element at index i 
+   */
+  @SuppressWarnings("unchecked")
+  public ScrollEvent getScrollEvents(int i) {
+     return (ScrollEvent)(((FSArray<ScrollEvent>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_scrollEvents)))).get(i));
+  } 
+
+  /** indexed setter for scrollEvents - sets an indexed value - All scroll events recorded on the page
+   * @generated
+   * @param i index in the array to set
+   * @param v value to set into the array 
+   */
+  @SuppressWarnings("unchecked")
+    public void setScrollEvents(int i, ScrollEvent v) {
+    ((FSArray<ScrollEvent>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_scrollEvents)))).set(i, v);
+  }  
+   
+    
+  //*--------------*
+  //* Feature: htmlSourceStates
+
+  /** getter for htmlSourceStates - gets HTML source of the page
+   * @generated
+   * @return value of the feature 
+   */
+  @SuppressWarnings("unchecked")
+  public FSArray<HtmlSourceState> getHtmlSourceStates() { 
+    return (FSArray<HtmlSourceState>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_htmlSourceStates)));
+  }
+    
+  /** setter for htmlSourceStates - sets HTML source of the page 
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setHtmlSourceStates(FSArray<HtmlSourceState> v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_htmlSourceStates), v);
+  }    
+    
+    
+  /** indexed getter for htmlSourceStates - gets an indexed value - HTML source of the page
+   * @generated
+   * @param i index in the array to get
+   * @return value of the element at index i 
+   */
+  @SuppressWarnings("unchecked")
+  public HtmlSourceState getHtmlSourceStates(int i) {
+     return (HtmlSourceState)(((FSArray<HtmlSourceState>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_htmlSourceStates)))).get(i));
+  } 
+
+  /** indexed setter for htmlSourceStates - sets an indexed value - HTML source of the page
+   * @generated
+   * @param i index in the array to set
+   * @param v value to set into the array 
+   */
+  @SuppressWarnings("unchecked")
+    public void setHtmlSourceStates(int i, HtmlSourceState v) {
+    ((FSArray<HtmlSourceState>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_htmlSourceStates)))).set(i, v);
+  }  
   }
 
     

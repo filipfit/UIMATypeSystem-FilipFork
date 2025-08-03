@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Wed Feb 26 11:38:01 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Sat Jun 14 14:21:44 CEST 2025 */
 
 package org.texttechnologylab.annotation;
  
@@ -22,8 +22,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Wed Feb 26 11:38:01 CET 2025
- * XML source: /home/staff_homes/verma/Documents/projects/UIMATypeSystem/target/jcasgen/typesystem.xml
+ * Updated by JCasGen Sat Jun 14 14:21:44 CEST 2025
+ * XML source: /home/filip/Documents/Bachelor/UIMATypeSystem-FilipFork/target/jcasgen/typesystem.xml
  * @generated */
 public class BertTopic extends Annotation {
  
